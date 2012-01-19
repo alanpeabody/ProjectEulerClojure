@@ -10,3 +10,13 @@
          (is (= (project-euler.core/two 20) 10))
          (is (= (project-euler.core/two 4000000) 4613732)))
 
+(deftest test-problem-three
+         (is (= (project-euler.core/three 13195) 29))
+         (is (= (project-euler.core/three 600851475143) 6857)))
+
+(deftest test-prime?
+         (is (true? (project-euler.core/prime? 2)))
+         (is (true? (project-euler.core/prime? 3)))
+         (is (true? (project-euler.core/prime? 29)))
+         (is (false? (project-euler.core/prime? 4)))
+         (is (false? (project-euler.core/prime? 10))))
