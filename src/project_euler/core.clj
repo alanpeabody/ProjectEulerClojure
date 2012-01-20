@@ -29,3 +29,15 @@
         divides? #(zero? (mod n %))]
     (first (filter prime?
                    (filter divides? (reverse (range 1 sqrt-n 2)))))))
+(defn four
+  "Return the largest palindrome made from the product of two n digit numbers"
+  [n]
+  (let [n-digit-numbers (reverse (range 0 (int (Math/pow 10 n))))
+        palindrome? #(= (seq (str %)) (reverse (str %)))]
+    (apply max (filter palindrome?
+                       (for [x n-digit-numbers y n-digit-numbers
+                             :when (<= y x)]
+                         (* x y))))))
+
+
+

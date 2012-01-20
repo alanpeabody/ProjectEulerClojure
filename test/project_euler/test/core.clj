@@ -14,6 +14,10 @@
          (is (= (project-euler.core/three 13195) 29))
          (is (= (project-euler.core/three 600851475143) 6857)))
 
+(deftest test-problem-four
+         (is (= (project-euler.core/four 2) 9009))
+         (is (= (project-euler.core/four 3) 906609)))
+
 (deftest test-prime?
          (is (true? (project-euler.core/prime? 2)))
          (is (true? (project-euler.core/prime? 3)))
